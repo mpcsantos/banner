@@ -1,4 +1,4 @@
-module github.com/dimiro1/banner
+module github.com/mpcsantos/banner
 
 go 1.11
 
