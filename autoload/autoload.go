@@ -10,7 +10,7 @@ import (
 	"flag"
 	"os/exec"
 	"net"
-	"github.com/dimiro1/banner"
+	"gitgithub.com/mpcsantos/banner"
 	"github.com/mattn/go-colorable"
 )
 
